@@ -30,9 +30,34 @@
               "ignoreFailures": true
           }
       ]
-    }
-
-
+    },
+    {
+      "name": "(gdb) Linux Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetDirectory}/HelloWorldProject",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          }
+      ]//,
+      //"pipeTransport": {
+      //    "pipeProgram": "ssh",
+      //    "pipeArgs": ["david@ilia-home.duckdns.org"],
+      //    "debuggerPath": "/usr/bin/gdb"
+      //},
+      //"sourceFileMap": {
+      //    "/remote/path/to/source": "${workspaceFolder}"
+      //}
+  }
   ]
 }
 

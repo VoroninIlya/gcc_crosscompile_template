@@ -64,6 +64,23 @@
       }
     },
     {
+      "name": "default-linux",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "toolchainFile": "${sourceDir}/cmake/gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "Lin64-Debug",
+      "inherits": "default-linux",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
       "name": "default-win",
       "hidden": true,
       "generator": "Ninja",
